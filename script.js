@@ -21,3 +21,34 @@ const difficultyMap = {
     medium: 'medium',
     hard: 'hard'
 };
+function start() {
+    const category = selectedCategory();
+    const difficulty = selectedDifficulty();
+    
+    if (!category) {
+        alert('Please select a category before starting the quiz!');
+        return;
+    }
+    
+    if (!difficulty) {
+        alert('Please select a difficulty level before starting the quiz!');
+        return;
+    }
+    
+    // Build URL with parameters
+    let quizUrl = 'quiz.html?';
+    const params = [];
+    
+    if (category) {
+        params.push(`category=${category}`);
+    }
+    
+    if (difficulty) {
+        params.push(`difficulty=${difficulty}`);
+    }
+    
+    quizUrl += params.join('&');
+    
+    console.log('Starting quiz with URL:', quizUrl);
+    window.location.href = quizUrl;
+}
