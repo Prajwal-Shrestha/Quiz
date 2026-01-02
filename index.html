@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+     <h1 class="header">Quiz Platform</h1>
+    <div class="container">
+    <p>Test your knowledge with our interactive quizzes!</p>
+    <p class="time"><i class="fa-solid fa-hourglass-end"></i>Time:10 minutes</p>
+    <p class="question"><i class="fa-solid fa-question"></i>Questions: 25</p>
+    <select name="category" id="category">
+        <option value="select">Select Category</option>
+        <option value="general">General Knowledge</option>
+        <option value="science">Science</option>
+        <option value="sports">Sports</option>
+        <option value="math">Mathematics</option>
+        <option value="geography">Geography</option>
+    </select>
+    <select name="difficulty" id="difficulty">
+        <option value="select">Select Difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <button onclick="location.href='quiz.html'" class="button">Start Quiz</button>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
