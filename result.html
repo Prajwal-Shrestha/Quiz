@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz Results</title>
+	<link rel="stylesheet" href="result.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+	<div class="result-wrapper">
+		<header class="result-header">
+			<h1>Quiz Results</h1>
+			<p class="result-meta" id="resultMeta">Calculating your performance...</p>
+		</header>
+
+		<section class="score-card">
+			<div class="score-main">
+				<p class="label">Score</p>
+				<p class="score-value" id="scoreValue">0 / 0</p>
+				<p class="grade" id="gradeValue">—</p>
+			</div>
+			<div class="score-stats">
+				<div class="stat">
+					<span>Percentage</span>
+					<strong id="percentageValue">0%</strong>
+				</div>
+				<div class="stat">
+					<span>Correct</span>
+					<strong id="correctValue">0</strong>
+				</div>
+				<div class="stat">
+					<span>Incorrect</span>
+					<strong id="incorrectValue">0</strong>
+				</div>
+				<div class="stat">
+					<span>Time Taken</span>
+					<strong id="timeValue">00:00</strong>
+				</div>
+			</div>
+		</section>
+
+		<div class="actions">
+			<button class="btn" id="retryBtn"><i class="fa-solid fa-rotate-left"></i> Retry</button>
+			<button class="btn btn-secondary" id="homeBtn"><i class="fa-solid fa-house"></i> Home</button>
+			<button class="btn btn-tertiary" id="toggleReview"><i class="fa-solid fa-list"></i> Toggle Review</button>
+		</div>
+
+		<section class="review-section">
+			<div class="review-header">
+				<h2>Answer Review</h2>
+			</div>
+			<div id="reviewList" class="review-list"></div>
+		</section>
+	</div>
+
+	<script src="result.js"></script>
+</body>
+</html>
