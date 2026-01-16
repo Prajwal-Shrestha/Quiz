@@ -19,18 +19,12 @@ body {
 
 body::before {
 	content: '';
-	position: absolute;
-	width: 200%;
-	height: 200%;
+	position: fixed;
+	width: 100%;
+	height: 100%;
 	background: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
 	background-size: 50px 50px;
-	animation: moveBackground 20s linear infinite;
 	z-index: 0;
-}
-
-@keyframes moveBackground {
-	0% { transform: translate(0, 0); }
-	100% { transform: translate(50px, 50px); }
 }
 
 .result-wrapper {
@@ -154,6 +148,12 @@ body::before {
 
 .btn-secondary {
 	background: #fff;
+	color: #4b3c9b;
+	border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.btn-tertiary {
+	background: #f5f7fa;
 	color: #4b3c9b;
 	border: 1px solid rgba(102, 126, 234, 0.3);
 }

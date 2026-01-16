@@ -20,7 +20,7 @@ let questions = [];
 let currentIndex = 0;
 let givenAnswers = [];
 let timerId = null;
-let timeRemaining = 600; // seconds (10 minutes)
+let timeRemaining = 300; // seconds (5 minutes)
 
 function decodeHTML(html) {
     const txt = document.createElement('textarea');
@@ -136,7 +136,7 @@ function finishQuiz() {
         answers: results,
         category,
         difficulty,
-        timeTakenSeconds: Math.min(600, 600 - timeRemaining)
+        timeTakenSeconds: Math.min(300, 300 - timeRemaining)
     };
 
     sessionStorage.setItem('quizResults', JSON.stringify(payload));
@@ -161,7 +161,7 @@ function handlePrev() {
 }
 
 async function fetchQuizQuestions() {
-    let apiUrl = `${API_BASE_URL}?amount=25&type=multiple`;
+    let apiUrl = `${API_BASE_URL}?amount=10&type=multiple`;
 
     if (category && categoryMap[category]) {
         apiUrl += `&category=${categoryMap[category]}`;
